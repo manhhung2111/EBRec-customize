@@ -120,7 +120,8 @@ def main():
 
         # 加载之前的参数
         if conf["dataset"]== "Youshu":
-            state_dict_load = torch.load("EBRec/savamodel/youshu/GCBRmodel")
+            
+            state_dict_load = torch.load(".\savamodel\youshu\GCBRmodel")
             model.load_state_dict(state_dict_load )
 
         optimizer = optim.Adam(model.parameters(), lr=lr, weight_decay=conf["l2_reg"])
