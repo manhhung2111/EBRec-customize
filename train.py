@@ -60,8 +60,8 @@ def main():
 
 
     device = torch.device("cuda:"+conf["gpu"] if torch.cuda.is_available() else "cpu")
+    device = "cpu"
     conf["device"] = device
-    conf["device"] = "cpu"
     print(conf)
 
     for lr, l2_reg, item_level_ratio, bundle_level_ratio, bundle_agg_ratio, embedding_size, num_layers, c_lambda, c_temp in \
